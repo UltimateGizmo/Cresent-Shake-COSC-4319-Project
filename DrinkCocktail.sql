@@ -33,26 +33,25 @@ alcohol int
 create table rating(
 ratingId int primary key, 
 accountId int,
-movieTitle varchar(255),
-movieRating int,
-directorName varchar(255),
-directorRating int,
-actorName varchar(255),
-actorRating int,
-foreign key (movieTitle) references movie(title),
-foreign key (directorName) references director(name),
-foreign key (actorName) references actor(name)
+drinkTitle varchar(255),
+drinkRating int,
+ingredientItems varchar(255),
+volumeSize int,
+
+foreign key (drinkTitle) references drink(title),
+foreign key (ingredientItems) references ingredient(name)
+
 );
 ##HAVE TO ADD TOP RATED
 
 create table topRated(
-rank int primary key,
-movieTitle varchar(255),
-directorName varchar(255),
-actorName varchar(255),
-foreign key (movieTitle) references movie(title),
-foreign key (directorName) references director(name),
-foreign key (actorName) references actor(name)
+ranking int primary key,
+drinkTitle varchar(255),
+ingredientItems varchar(255),
+
+foreign key (drinkTitle) references drink(title),
+foreign key (ingredientItems) references ingredient(name)
+
 );
 
 # THE FOLLOWING IS PRE LOADED DATA TO THE DATABASE (EVERYTHING IS HARD CODED IN)
@@ -83,7 +82,7 @@ values  (1,2,'UP',1,'Bob Peterson',3,'Pete Docter',3),
         (4,1,'Cars',5,'John Lasseter',4,'Owen Wilson',4),
         (5,2,'Free Guy',4,'Shawn Levy',5,'Rayn Reynolds',5);
         
-insert into topRated(rank, movieTitle, directorName, actorName)
+insert into topRated(ranking, movieTitle, directorName, actorName)
 values	(1,'Free guy','Shawn Levy','Rayn Reynolds'),
 		(2,'Cars','Bob Peterson','Owen Wilson'),
         (3,'UP','John Lasseter','Pete Docter');
