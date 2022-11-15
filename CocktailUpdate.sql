@@ -91,7 +91,7 @@ values	(1,'Irish Coffee'),
 
 ###########THE FOLLOWING IS ACCOUNT-TABLE UPDATING EXAMPLE####################
 Select * from register; #Check
-UPDATE register SET name = 'BigBrains' where id = 2; #Changing name
+UPDATE register SET username = 'BigBrains' where id = 2; #Changing name
 Select * from register; #Check
 delete from register where id = 2; #Delete account
 Select * from register; #Check
@@ -99,5 +99,4 @@ insert into register(id, username, email, password)                             
 values('4', 'Winner', 'thebest@woohoo.com','444');
 Select * from register; #check
 ################################################################################
-
 
