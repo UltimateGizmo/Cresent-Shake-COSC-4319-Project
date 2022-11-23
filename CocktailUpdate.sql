@@ -2,6 +2,7 @@ drop database if exists drinkCocktail;
 create database drinkCocktail;
 use drinkCocktail;
 
+
 CREATE TABLE register(
     id int(10) AUTO_INCREMENT PRIMARY KEY,
     firstname varchar(50),
@@ -62,9 +63,9 @@ foreign key (liquorName) references liquor(name)
 
 # THE FOLLOWING IS PRE LOADED DATA TO THE DATABASE (EVERYTHING IS HARD CODED IN)
 insert into register (id, username, email, password)
-values	(1, 'Drunk_Man 22', 'Gman@gmail.com', '111'),
-		(2, 'Boozhound420', 'DoubleGulpCup@aol.com', '222'),
-        (3, 'LiquorLover99', 'theDrinker@yahoo.com', '333');
+values	(1, 'Drunk_Man 22', 'Gman@gmail.com', aes_encrypt(password, '111')),
+		(2, 'Boozhound420', 'DoubleGulpCup@aol.com', aes_encrypt(password, '222')),
+        (3, 'LiquorLover99', 'theDrinker@yahoo.com', aes_encrypt(password, '333'));
 
 insert into ingredients (name, ingredientID)
 values	('Vodka', 1),
@@ -94,9 +95,9 @@ Select * from register; #Check
 UPDATE register SET username = 'BigBrains' where id = 2; #Changing name
 Select * from register; #Check
 delete from register where id = 2; #Delete account
-Select * from register; #Check
 insert into register(id, username, email, password)                                                        #Attemping to add new user
-values('4', 'Winner', 'thebest@woohoo.com','444');
-Select * from register; #check
+values('4', 'Winner', 'thebest@woohoo.com', aes_encrypt(password, '444'));
+Select *from register; #check
+
 ################################################################################
 
