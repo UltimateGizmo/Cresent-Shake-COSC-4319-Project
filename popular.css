@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: garamond;    
+}
+.picas{
+    width: 1250px;
+    height: 500px;
+    background-image: url(img/67.webp);
+    margin-left: 200px;   
+}
+.btn{
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: black;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+}
+.btn.click{
+    left: 260px;
+}
+.btn span{
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+.btn.click span:before{
+    content: '\f00d';
+}
+.container{
+    width: 100%;
+    height: 15vh;
+    background: darkgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    background:white;
+    width: 550px;
+    height: 50px;
+    display: flex;
+}
+form input{
+    flex: 1;
+    border: none;
+    outline: none;
+}
+form button{
+    border: 1px solid black;
+    background: rgb(206, 115, 3);
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 600px;
+    letter-spacing: 1px;
+    cursor: pointer; 
+}
+form button:hover{
+    color: lime;
+    background-color: grey;
+    transition: 0.8s;
+}
+.sidebar{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: 0px;
+    background: black;
+    transition: left 0.4s ease;
+}
+.sidebar.show{
+   left: 0px; 
+}
+.sidebar .text{
+    color:  black;
+    font-size: 25px;
+    font-weight: 600px;
+    line-height: 65px;
+    text-align: center;
+    background: gray;
+    letter-spacing: 1px;
+}
+nav ul{
+    background:  rgb(206, 115, 3);
+    width: 100%;
+    list-style: none;
+}
+nav ul li{
+    line-height: 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+nav ul li:last-child{
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+nav ul li a{
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 40px;
+    font-weight: 40px;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+}
+nav ul li a:hover{
+    color: white;
+    background-color:  grey;
+    transition: 0.8s;
+}
+nav ul li.active a{
+    color:  rgb(206, 115, 3);
+    background: darkgray;
+    border-left-color:  rgb(206, 115, 3);
+    border-left-width: 5px;
+    transition: 0.8s;
+}
+nav ul ul{
+    position: static;
+    display: none;
+}
+nav ul .feat-show.show{
+    display: block;
+}
+nav ul .com-show.show{
+    display: block;
+}
+nav ul .serv-show.show1{
+    display: block;
+}
+nav ul ul li{
+    line-height: 42px;
+    border-bottom: none;
+}
+nav ul ul li a{
+    font-size: 17px;
+    color: white;
+    padding-left: 80px;
+}
+nav ul li.active ul li a{
+    color: white;
+    background:  rgb(206, 115, 3);
+    border-left-color: transparent;
+}
+nav ul li.active ul li a:hover{
+    color:black;
+    background-color: rgb(134, 68, 13);
+}
+nav ul ul li a:hover{
+    color: rgb(206, 115, 3);
+    background: darkgray;
+
+}
+nav ul li a span{
+position: absolute;
+top: 50%;
+right: 20px;
+transform: translateY(-50%);
+font-size: 22px;
+transition: transform 0.4s;
+}
+nav ul li a span.rotate{
+transform: translateY(-50%) rotate(-180deg);
+}
+.tagline{
+    position: absolute;
+    width: 1200px;
+    margin-left: 0; 
+    margin-top: 0;
+}
+h1{
+    color: darkgrey;
+    font-size: 50px;
+    font-family: garamond;
+    text-align: center;
+    margin-top: 275px;
+}
+h2{
+    color: white;
+    font-size: 90px;  
+    font-family: garamond;
+    text-shadow: 0 0 40px   purple;
+    text-align: center;
+    margin-bottom: -170px;
+    padding-top: 35px;
+    margin-left: 5%;  
+}
+.pic{
+    width: 150px;
+    height: 150px;
+    background-image: url(img/Neonmoon.png);
+    background-size: 200%;
+    margin-top: 75px;
+    object-position: left top;
+}
+.container1{
+    text-align: right;
+    margin-top: -100px;
+   
+}
+.btn1{
+    border: 1px solid black;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: garamond;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+}
+.btn12{
+    color: black;
+    background-color:  rgb(206, 115, 3);
+}
+.btn12:hover{
+    color: rgb(103, 238, 19);
+    background-color: gray;
+}
+.pic2
+{
+    size: 100%;
+    width: 200%;
+}
+.picb{
+    size: 100%;
+    width: 200%;   
+}
+h10{
+    color: black;
+    font-size: 50px;
+    font-family: garamond;
+    text-align: center;
+    margin-top: px;
+    margin-left: 7%;
+}
+h11{
+    color: orange;
+    font-size: 57px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding-left: 46%;
+    text-decoration: underline;
+}
+.tshot{
+    width: 175px;
+    height: 125px;
+    margin-left: 98%;
+    margin-top:-10%; 
+}
+.gshot{
+    width: 175px;
+    height: 125px;
+    margin-left: 90%;
+    margin-top:-10%; 
+}
+.vshot{
+    width: 175px;
+    height: 125px;
+    margin-left: 95%;
+    margin-top:-10%; 
+}
+.wshot{
+    width: 175px;
+    height: 125px;
+    margin-left: 100%;
+    margin-top:-10%; 
+}
+.rshot{
+    width: 140px;
+    height: 145px;
+    margin-left: 93%;
+    margin-top:-10%; 
+}
+div.content{
+    margin-left: 25%;
+    border:2px solid black;
+    height:200px;
+    width: 250px;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;  
+    margin-top: 1%;  
+    background-color: darkgrey;
+}
+.screwdriver{
+    width: 250px;
+    height: 250px;
+    margin-left: 25%;
+    margin-top: 3%;
+    border-radius: 30px;
+    
+}
